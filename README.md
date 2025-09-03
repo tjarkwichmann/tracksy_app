@@ -1,4 +1,4 @@
-# 🏃‍♂️ Tracksy - Social Fitness Tracking App
+# Tracksy - Social Fitness Tracking App
 
 A social fitness tracking application that combines personal workout and run tracking with gamification and community features. Users can track their activities, earn badges and XP, set weekly goals, and participate in group challenges with friends.
 
