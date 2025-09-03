@@ -1,3 +1,4 @@
+from app.models import post_comment_model, post_like_model, post_model, run_model, run_route_points_model, user_badge_model, user_model, weekly_goal_model, workout_model
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy.ext.declarative import declarative_base
@@ -56,10 +57,8 @@ def create_tables():
     try:
         # Import all models to ensure they are registered with Base.metadata
         from app.models import (
-            user, run, workout, exercise, exercise_set, badge,
-            user_badge, friend, group, group_membership, post,
-            post_like, post_comment, challenge, weekly_goal, 
-            challenge_progress, run_route_points
+            exercise_model, exercise_set_model, badge_model,
+            friend_model, group_model, group_membership_model, challenge_model, challenge_progress_model
         )
         
         print("Creating database tables...")

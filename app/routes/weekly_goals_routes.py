@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from app.schemas.weekly_goal import WeeklyGoalCreate, WeeklyGoalUpdate, WeeklyGoalRead
+from app.schemas.weekly_goal_schemas import WeeklyGoalCreate, WeeklyGoalUpdate, WeeklyGoalRead
 from app.db.database import get_db
-from app.models.weekly_goal import WeeklyGoal
-import app.models.user as User
+from app.models.weekly_goal_model import WeeklyGoal
+import app.models.user_model as User
 
 router = APIRouter(prefix="/goals", tags=["Goals"])
 

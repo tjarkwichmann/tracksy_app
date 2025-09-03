@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from app.schemas.exercise import ExerciseRead
+from app.schemas.exercise_schmemas import ExerciseRead
 
 class ExerciseSetBase(BaseModel):
     exercise_id: int

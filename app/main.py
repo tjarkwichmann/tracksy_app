@@ -1,13 +1,12 @@
 from fastapi import FastAPI
 
 from app.db import database
-from app.routes import (users, runs, weekly_goals, workouts, exercises, posts, post_comments, post_likes, 
-                        friends, groups, group_memberships, badges, challenges)
-from app.models import (
-    user, run, workout, exercise,
-    exercise_set, badge,
-    user_badge, friend, group, group_membership, post,
-    post_like, post_comment, challenge, weekly_goal, challenge_progress, run_route_points
+from app.routes import (badges_routes, challenges_routes, exercises_routes, friends_routes, 
+                        group_memberships_routes, groups_routes, post_comments_routes, post_likes_routes, posts_routes, 
+                        runs_routes, users_routes, weekly_goals_routes, workouts_routes)
+from app.models import (post_comment_model, post_like_model, post_model, run_model, run_route_points_model, user_badge_model,
+                         user_model, weekly_goal_model, exercise_model, exercise_set_model, badge_model, friend_model, group_model, 
+                         group_membership_model, challenge_model, challenge_progress_model, workout_model
 )
 
 from fastapi import FastAPI
@@ -24,19 +23,19 @@ app.add_middleware(
 )
 
 
-app.include_router(users.router)
-app.include_router(runs.router)
-app.include_router(workouts.router)
-app.include_router(exercises.router)
-app.include_router(posts.router)
-app.include_router(post_comments.router)
-app.include_router(post_likes.router)
-app.include_router(friends.router)
-app.include_router(groups.router)
-app.include_router(group_memberships.router)
-app.include_router(badges.router)
-app.include_router(challenges.router)
-app.include_router(weekly_goals.router)
+app.include_router(users_routes.router)
+app.include_router(runs_routes.router)
+app.include_router(workouts_routes.router)
+app.include_router(exercises_routes.router)
+app.include_router(posts_routes.router)
+app.include_router(post_comments_routes.router)
+app.include_router(post_likes_routes.router)
+app.include_router(friends_routes.router)
+app.include_router(groups_routes.router)
+app.include_router(group_memberships_routes.router)
+app.include_router(badges_routes.router)
+app.include_router(challenges_routes.router)
+app.include_router(weekly_goals_routes.router)
 
 
 

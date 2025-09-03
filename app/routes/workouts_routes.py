@@ -3,13 +3,13 @@ from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 from app.db.database import get_db
-from app.models.workout import Workout
-from app.schemas.workout import WorkoutCreate, WorkoutRead, WorkoutWithBadgesResponse
-from app.models.exercise_set import ExerciseSet
+from app.models.workout_model import Workout
+from app.schemas.workout_schemas import WorkoutCreate, WorkoutRead, WorkoutWithBadgesResponse
+from app.models.exercise_set_model import ExerciseSet
 from app.core.levelling import update_xp_and_check_level_up
 from app.core.update_challenge_progress import update_challenge_progress_with_workout
 from app.core.acquire_badges import acquire_badges
-from app.schemas.exercise_set import ExerciseSetRead
+from app.schemas.exercise_set_schmemas import ExerciseSetRead
 
 router = APIRouter(prefix="/workouts", tags=["workouts"])
 

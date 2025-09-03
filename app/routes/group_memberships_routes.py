@@ -1,10 +1,10 @@
 from fastapi import APIRouter, HTTPException, Depends, Query
 from app.db.database import get_db
 from sqlalchemy.orm import Session
-from app.models.group_membership import GroupMembership
-from app.schemas.group_membership import GroupMembershipBase, GroupMembershipRead
-from app.models.group import Group
-from app.schemas.group import GroupRead
+from app.models.group_membership_model import GroupMembership
+from app.schemas.group_membership_schemas import GroupMembershipBase, GroupMembershipRead
+from app.models.group_model import Group
+from app.schemas.group_schemas import GroupRead
 
 router = APIRouter(prefix="/groups/memberships", tags=["groups"])
 

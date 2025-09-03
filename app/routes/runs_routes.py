@@ -2,14 +2,14 @@ from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy import func
 from sqlalchemy.orm import Session
 from datetime import datetime, timedelta
-from app.models.run_route_points import RunRoutePoints
+from app.models.run_route_points_model import RunRoutePoints
 from shapely.geometry import Point
 from geoalchemy2.shape import from_shape
 
 from app.core.acquire_badges import acquire_badges
 from app.db.database import get_db
-from app.models.run import Run
-from app.schemas.run import RunCreate, RunRead, RunWithBadgesResponse
+from app.models.run_model import Run
+from app.schemas.run_schemas import RunCreate, RunRead, RunWithBadgesResponse
 from app.core.update_challenge_progress import update_challenge_progress_with_run
 from app.core.levelling import update_xp_and_check_level_up
 

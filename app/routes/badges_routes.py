@@ -1,12 +1,12 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from app.schemas.badge import BadgeBase, BadgeRead
+from app.schemas.badge_schemas import BadgeBase, BadgeRead
 from app.db.database import get_db
-from app.models.badge import Badges
-from app.models.user_badge import UserBadge
+from app.models.badge_model import Badges
+from app.models.user_badge_model import UserBadge
 from datetime import datetime
-from app.models.run import Run
-from app.models.workout import Workout
+from app.models.run_model import Run
+from app.models.workout_model import Workout
 router = APIRouter(prefix="/badges", tags=["badges"])
 
 
