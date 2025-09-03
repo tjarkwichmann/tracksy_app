@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends, Query
 from app.db.database import get_db
 from sqlalchemy.orm import Session
-from app.schemas.post_comment import PostCommentBase, PostCommentRead
-from app.models.post_comment import PostComment
+from app.schemas.post_comment_schemas import PostCommentBase, PostCommentRead
+from app.models.post_comment_model import PostComment
 
 
 router = APIRouter(prefix="/post", tags=["posts"])

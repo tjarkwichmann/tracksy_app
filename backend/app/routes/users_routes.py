@@ -4,12 +4,12 @@ from argon2 import PasswordHasher
 from argon2.exceptions import VerifyMismatchError
 from fastapi import APIRouter, HTTPException, Depends, Query
 from sqlalchemy.orm import Session
-from app.schemas.user import UserCreate, UserRead, UserLogin, UserLoginRead
-from app.models.user import User
+from app.schemas.user_schemas import UserCreate, UserRead, UserLogin, UserLoginRead
+from app.models.user_model import User
 from app.db.database import get_db
-from app.models.run import Run
-from app.models.workout import Workout
-from app.models.friend import Friend
+from app.models.run_model import Run
+from app.models.workout_model import Workout
+from app.models.friend_model import Friend
 
 router = APIRouter(prefix="/users", tags=["users"])
 ph = PasswordHasher()

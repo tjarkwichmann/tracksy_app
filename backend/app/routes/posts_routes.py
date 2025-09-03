@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, Depends
 from app.db.database import get_db
-from app.schemas.post import PostRead, PostBase, PostCreate
-from app.models.post import Post
-from app.models.user import User
-from app.models.friend import Friend
+from app.schemas.post_schemas import PostRead, PostBase, PostCreate
+from app.models.post_model import Post
+from app.models.user_model import User
+from app.models.friend_model import Friend
 from sqlalchemy.orm import Session
 from sqlalchemy import and_
 

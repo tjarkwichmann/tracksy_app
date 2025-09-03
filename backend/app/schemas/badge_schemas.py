@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
-from app.models.badge_type import BadgeType
+from app.models.badge_type_model import BadgeType
 
 class BadgeBase(BaseModel):
     title: str

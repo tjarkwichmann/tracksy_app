@@ -2,12 +2,12 @@ from datetime import datetime
 from typing import Optional
 from app.models.challenge_progress import ChallengeProgress
 from app.models.challenge import Challenge
-from app.schemas.workout import WorkoutCreate
+from app.schemas.workout_schemas import WorkoutCreate
 from app.db.database import get_db
 from fastapi import HTTPException, Depends
-from app.schemas.run import RunCreate
+from app.schemas.run_schemas import RunCreate
 from sqlalchemy.orm import Session
-from app.models.user import User
+from app.models.user_model import User
 from sqlalchemy import and_, or_
 
 

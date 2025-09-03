@@ -1,4 +1,4 @@
-from app.models.user import User
+from app.models.user_model import User
 from sqlalchemy.orm import Session
 
 def update_xp_and_check_level_up(user_id: int, xp: int,  db: Session):

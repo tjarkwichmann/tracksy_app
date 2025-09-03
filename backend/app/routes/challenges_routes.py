@@ -1,12 +1,13 @@
+
 from fastapi import APIRouter, HTTPException, Depends, Query
 from sqlalchemy.orm import Session
 from app.db.database import get_db
-from app.models.challenge import Challenge
-from app.schemas.challenge import ChallengeBase, ChallengeRead
-from app.models.challenge_progress import ChallengeProgress
-from app.schemas.challenge_progress import ChallengeProgressBase, ChallengeProgressRead
-from app.models.group import Group
-from app.models.group_membership import GroupMembership
+from app.models.challenge_model import Challenge
+from app.schemas.challenge_schemas import ChallengeBase, ChallengeRead
+from app.models.challenge_progress_model import ChallengeProgress
+from app.schemas.challenge_progress_schemas import ChallengeProgressBase, ChallengeProgressRead
+from app.models.group_model import Group
+from app.models.group_membership_model import GroupMembership
 
 router = APIRouter(prefix="/challenges", tags=["challenges"])
 

@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from app.db.database import get_db
 from sqlalchemy.orm import Session
-from app.models.friend import Friend
-from app.schemas.friend import FriendBase, FriendRead
+from app.models.friend_model import Friend
+from app.schemas.friend_schemas import FriendBase, FriendRead
 
 router = APIRouter(prefix="/friends", tags=["friends"])
 

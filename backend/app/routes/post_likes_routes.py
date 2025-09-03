@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.orm import Session
 from app.db.database import get_db
-from app.models.post_like import PostLike
-from app.schemas.post_like import PostLikeBase, PostLikeRead
+from app.models.post_like_model import PostLike
+from app.schemas.post_like_schemas import PostLikeBase, PostLikeRead
 
 router = APIRouter(prefix="/post", tags=["posts"])
 

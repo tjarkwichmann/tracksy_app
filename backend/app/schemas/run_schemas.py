@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Optional
 from typing import Any
 
-from app.schemas.run_route_point import RunRoutePoint
+from app.schemas.run_route_point_schmemas import RunRoutePoint
 
 
 class RunBase(BaseModel):

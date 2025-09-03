@@ -1,8 +1,8 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from app.schemas.exercise import ExerciseRead, ExerciseBase
+from app.schemas.exercise_schmemas import ExerciseRead, ExerciseBase
 from app.db.database import get_db
-from app.models.exercise import Exercise
+from app.models.exercise_model import Exercise
 router = APIRouter(prefix="/exercises", tags=["exercises"])
 
 @router.get("/", response_model=list[ExerciseRead])

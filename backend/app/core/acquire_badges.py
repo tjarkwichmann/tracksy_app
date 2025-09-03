@@ -1,13 +1,13 @@
 from datetime import datetime
-from app.schemas.badge import BadgeRead
-from app.models.badge import Badges
+from app.schemas.badge_schemas import BadgeRead
+from app.models.badge_model import Badges
 from sqlalchemy.orm import Session
 from app.db.database import get_db
 from fastapi import Depends, HTTPException
-from app.models.user import User
-from app.models.user_badge import UserBadge
-from app.models.workout import Workout
-from app.models.run import Run
+from app.models.user_model import User
+from app.models.user_badge_model import UserBadge
+from app.models.workout_model import Workout
+from app.models.run_model import Run
 
 def acquire_badges(user_id: int, db: Session = Depends(get_db)) -> list[BadgeRead]:
     """

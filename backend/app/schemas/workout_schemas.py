@@ -1,8 +1,8 @@
 from typing import List
 from datetime import datetime
 from pydantic import BaseModel
-from app.schemas.exercise_set import ExerciseSetBase, ExerciseSetRead
-from app.schemas.badge import BadgeRead
+from app.schemas.exercise_set_schmemas import ExerciseSetBase, ExerciseSetRead
+from app.schemas.badge_schemas import BadgeRead
 class WorkoutBase(BaseModel):
     start_time: datetime
     end_time: datetime
