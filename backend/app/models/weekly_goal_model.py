@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, Enum, ForeignKey, Date
 from app.db.database import Base
-from app.models.goal_type import GoalType
+from app.models.goal_type_model import GoalType
 
 class WeeklyGoal(Base):
     __tablename__ = "weekly_goals"

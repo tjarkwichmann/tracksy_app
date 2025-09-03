@@ -1,7 +1,7 @@
 from pydantic import BaseModel
 from typing import Optional
 from datetime import date
-from app.models.challange_type import ChallengeType
+from app.models.challenge_type_model import ChallengeType
 
 class ChallengeBase(BaseModel):
     title: str

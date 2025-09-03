@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import Optional
-from app.models.challenge_progress import ChallengeProgress
-from app.models.challenge import Challenge
+from app.models.challenge_progress_model import ChallengeProgress
+from app.models.challenge_model import Challenge
 from app.schemas.workout_schemas import WorkoutCreate
 from app.db.database import get_db
 from fastapi import HTTPException, Depends

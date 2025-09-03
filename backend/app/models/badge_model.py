@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, ForeignKey, Text, Enum as SqlalchemyEnum
-from .badge_type import BadgeType
+from app.models.badge_type_model import BadgeType
 from app.db.database import Base
 
 class Badges(Base):

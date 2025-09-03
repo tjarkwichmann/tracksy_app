@@ -1,12 +1,11 @@
-from app.models import post_comment_model, post_like_model, post_model, run_model, run_route_points_model, user_badge_model, user_model, weekly_goal_model, workout_model
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, Session
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.exc import OperationalError
 from typing import Generator
 import os
 import time
 from dotenv import load_dotenv
+from app.db.base import Base
 
 load_dotenv()
 
@@ -42,7 +41,6 @@ wait_for_database()
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()
 
 def get_db() -> Generator[Session, None, None]:
     db = SessionLocal()
@@ -57,8 +55,11 @@ def create_tables():
     try:
         # Import all models to ensure they are registered with Base.metadata
         from app.models import (
-            exercise_model, exercise_set_model, badge_model,
-            friend_model, group_model, group_membership_model, challenge_model, challenge_progress_model
+            post_comment_model, post_like_model, post_model, run_model, 
+            run_route_points_model, user_badge_model, user_model, weekly_goal_model, 
+            workout_model, exercise_model, exercise_set_model, badge_model,
+            friend_model, group_model, group_membership_model, challenge_model, 
+            challenge_progress_model, badge_type_model, challenge_type_model, goal_type_model
         )
         
         print("Creating database tables...")

@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from datetime import date
-from app.models.goal_type import GoalType
+from app.models.goal_type_model import GoalType
 
 class WeeklyGoalBase(BaseModel):
     user_id: int

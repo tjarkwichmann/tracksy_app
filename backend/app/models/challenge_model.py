@@ -1,5 +1,5 @@
 from sqlalchemy import Integer, String, Text, DateTime, ForeignKey, Column, Enum as SqlalchemyEnum, Date, Float
-from .challange_type import ChallengeType
+from app.models.challenge_type_model import ChallengeType
 from app.db.database import Base
 
 
