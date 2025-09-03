@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg2-binary
+python-dotenv
+gunicorn
+email-validator
+geoalchemy2
+psycopg2-binary
+argon2-cffi
+shapely
