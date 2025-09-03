@@ -297,7 +297,3 @@ Key dependencies include:
 -   **GeoAlchemy2**: Geospatial database support
 -   **Uvicorn**: ASGI server implementation
 -   **Gunicorn**: WSGI HTTP server for production
-
-## License
-
-[Add your license information here]
