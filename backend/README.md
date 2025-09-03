@@ -84,10 +84,10 @@ app/
     ├── user_schemas.py      # User schemas
     ├── run_schemas.py       # Run schemas
     ├── workout_schemas.py   # Workout schemas
-    ├── exercise_schmemas.py # Exercise schemas
-    ├── exercise_set_schmemas.py # Exercise set schemas
+    ├── exercise_schemas.py # Exercise schemas
+    ├── exercise_set_schemas.py # Exercise set schemas
     ├── badge_schemas.py     # Badge schemas
-    ├── user_badge_schmemas.py # User badge schemas
+    ├── user_badge_schemas.py # User badge schemas
     ├── challenge_schemas.py # Challenge schemas
     ├── challenge_progress_schemas.py # Challenge progress schemas
     ├── friend_schemas.py    # Friend schemas
@@ -99,7 +99,7 @@ app/
     ├── weekly_goal_schemas.py # Goal schemas
     ├── goal_schemas.py      # Goal type schemas
     ├── user_goal_schemas.py # User goal relation schemas
-    └── run_route_point_schmemas.py # Route point schemas
+    └── run_route_point_schemas.py # Route point schemas
 ```
 
 ## API Endpoints
